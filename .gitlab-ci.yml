@@ -1,0 +1,27 @@
+
+stages:
+  - build_docker
+  - regression
+  - mobile
+  - bitrix_errors
+  - smoke
+  - orders_sanity_test
+
+variables:
+  GIT_SSL_NO_VERIFY: "true"
+
+build:
+  stage: build_docker
+  when: always
+  timeout: 30m
+  script:
+      - docker-compose run --rm playwright
+
+
+smokeTests:
+  image: playwright
+  when: manual
+  stage: smoke
+  timeout: 90m
+  script:
+      - npx playwright test --grep "@smoke"
