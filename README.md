@@ -12,7 +12,12 @@
 ## Команда запуска Docker
 
 ```bash
-docker-compose run --rm playwright
+# Сборка контейнера
+docker-compose build
+
+# Запуск контейнера и выполнение тестов Playwright
+docker-compose run --rm playwright npx playwright test
+
 ```
 
 ## Команда для запуска всех тестов. Если требуется запуск в конкретном браузере - то необходимо дописать в конце команды конкретный "--project"
