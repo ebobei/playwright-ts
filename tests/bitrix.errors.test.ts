@@ -17,7 +17,7 @@ async function testPage(url: string, page: Page) {
   }
 }
 
-test.describe("Проверка главной страницы на наличие ошибок Cannot find и содержания тэга pre", () => {
+test.describe("Проверка страницы на наличие ошибок Cannot find и содержания тэга pre", () => {
   test.describe.configure({ timeout: 90000 });
 
   test.beforeAll(async ({ browser }) => {
