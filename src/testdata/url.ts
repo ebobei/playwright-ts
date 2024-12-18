@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-const Url = {
+const url = {
   prod: process.env.PROD,
   main: process.env.RELEASE,
   stage: process.env.STAGE,
@@ -49,4 +49,4 @@ const Url = {
   },
 };
 
-export default Url;
+export default url;

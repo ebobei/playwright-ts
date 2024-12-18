@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "playwright test"
   },
@@ -10,16 +11,22 @@
   "author": "Aleksandr Geynts",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.17.0",
     "@playwright/test": "^1.42.1",
     "@types/chai": "^4.3.14",
     "@types/mocha": "^10.0.6",
     "@types/node": "^20.12.3",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
     "chai": "^5.1.0",
     "dotenv": "^16.4.5",
-    "eslint": "^8.57.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-playwright": "^2.1.0",
+    "eslint-plugin-react": "^7.37.2",
+    "globals": "^15.13.0",
     "mocha": "^10.4.0",
     "typescript": "^5.4.3",
-    "typescript-eslint": "^7.5.0"
+    "typescript-eslint": "^8.18.0"
   },
   "dependencies": {
     "node-fetch": "^3.3.2",

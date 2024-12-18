@@ -26,6 +26,13 @@ export default class ErrorsPage {
     }
   }
 
+  async СheckCannotFindErrors(): Promise<void> {
+    const errors = await this.cannotFindErrorsCollection.count();
+    if (errors > 0) {
+      throw new Error("На странице содержатся ошибки вида Cannot Find!");
+    }
+  }
+
   async checkErrorMessages(): Promise<void> {
     const messages = await this.errorMessagesCollection.count();
     if (messages > 0) {
